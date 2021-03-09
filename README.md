@@ -1,6 +1,6 @@
 # Read Digital Certificate in Python
 
-![Build Status](https://github.com/leogregianin/python-digital-certificate/workflows/python-digital-certificate/badge.svg)
+[![python-digital-certificate](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml/badge.svg)](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml)
 
 
 ## Install
