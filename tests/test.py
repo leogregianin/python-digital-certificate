@@ -68,3 +68,11 @@ class test_certificado(unittest.TestCase):
         )
         _cert.read_pfx_file()
         self.assertEqual(str(_cert.issuer()), "<Name(CN={59F1E461-DDE5-4D2F-A01A-83322A9EB838})>")
+
+    def test_common_name(self):
+        _cert = Certificate(
+            pfx_file=pfx_file,
+            password=password_ok
+        )
+        _cert.read_pfx_file()
+        self.assertEqual(str(_cert.commonName()), "{59F1E461-DDE5-4D2F-A01A-83322A9EB838}")
