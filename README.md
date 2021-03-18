@@ -15,7 +15,7 @@ $ source .venv/bin/activate
 Install Dependencies
     
 ```sh
-$ pip install -r requeriments.txt
+$ pip install -r requirements.txt
 ```
 
 ## Tests
@@ -41,9 +41,3 @@ _cert.read_pfx_file()
 print(_cert.serial_number())
 
 ```
-
-## ToDo
-
- - Sign pdf file
- - Sign txt file
- - Sign xml file
