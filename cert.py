@@ -16,16 +16,28 @@ class Certificate():
                 self.cert_content = cert_file.read()
 
             # Load pkcs12
-            pkcs12 = crypto.load_pkcs12(self.cert_content, self.password)
+            pkcs12 = crypto.load_pkcs12(
+                self.cert_content,
+                self.password
+            )
 
             # PEM formatted private key
-            key = crypto.dump_privatekey(crypto.FILETYPE_PEM, pkcs12.get_privatekey())
+            key = crypto.dump_privatekey(
+                crypto.FILETYPE_PEM,
+                pkcs12.get_privatekey()
+            )
 
             # PEM formatted certificate
-            pem_data = crypto.dump_certificate(crypto.FILETYPE_PEM, pkcs12.get_certificate())
+            pem_data = crypto.dump_certificate(
+                crypto.FILETYPE_PEM,
+                pkcs12.get_certificate()
+            )
 
             # Load pen_x509
-            self.cert = x509.load_pem_x509_certificate(pem_data, default_backend())
+            self.cert = x509.load_pem_x509_certificate(
+                pem_data,
+                default_backend()
+            )
 
         except FileNotFoundError as err:
             raise FileNotFoundError(f"File not found. {err}")
