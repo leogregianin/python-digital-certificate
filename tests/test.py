@@ -5,8 +5,8 @@ from cert import Certificate
 
 pfx_file = "./pfx-files/test_file.pfx"
 pfx_file_not_found = "pfx_file_not_found.pfx"
-password_ok = "123456"
-password_fail = "123"
+password_ok = b"123456"
+password_fail = b"123"
 
 
 class test_certificado(unittest.TestCase):
