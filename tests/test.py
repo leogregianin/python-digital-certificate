@@ -75,4 +75,4 @@ class test_certificado(unittest.TestCase):
             password=password_ok
         )
         _cert.read_pfx_file()
-        self.assertEqual(str(_cert.commonName()), "{59F1E461-DDE5-4D2F-A01A-83322A9EB838}")
+        self.assertEqual(str(_cert.common_name()), "{59F1E461-DDE5-4D2F-A01A-83322A9EB838}")

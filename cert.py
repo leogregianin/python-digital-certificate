@@ -36,7 +36,7 @@ class Certificate():
     def subject(self):
         return self.cert.subject
 
-    def commonName(self):
+    def common_name(self):
         return self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
 
     def serial_number(self):
