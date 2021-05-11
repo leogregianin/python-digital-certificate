@@ -39,5 +39,9 @@ _cert = Certificate(
 )
 _cert.read_pfx_file()
 print(_cert.serial_number())
-
+print(_cert.not_valid_before())
+print(_cert.not_valid_after())
+print(_cert.subject())
+print(_cert.common_name())
+print(_cert.issuer())
 ```
