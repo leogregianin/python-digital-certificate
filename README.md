@@ -37,11 +37,25 @@ _cert = Certificate(
     pfx_file="./pfx-files/test_file.pfx",
     password=b"123456"
 )
+
+# Read PFX file
 _cert.read_pfx_file()
+
+# Get Serial Number
 print(_cert.serial_number())
+
+# Get not valid before date
 print(_cert.not_valid_before())
+
+# Get not valid after date
 print(_cert.not_valid_after())
+
+# Get subject name
 print(_cert.subject())
+
+# Get owner name
 print(_cert.common_name())
+
+# Get Issuer name
 print(_cert.issuer())
 ```
