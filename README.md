@@ -1,6 +1,6 @@
-# Read/Write Digital Certificate in Python
+# Read digital certificate (pfx and p12 files) in Python
 
-[![python-digital-certificate](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml/badge.svg)](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml)
+[![PyPI](https://img.shields.io/pypi/v/python-digital-certificate)](https://pypi.org/project/python-digital-certificate/)[![python-digital-certificate](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml/badge.svg)](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml)
 
 
 ## Development
@@ -30,7 +30,7 @@ $ python -m unittest
 
 ```python
 
-from cert import Certificate
+from digital_certificate.cert import Certificate
 
 
 _cert = Certificate(

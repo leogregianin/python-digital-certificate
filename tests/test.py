@@ -1,6 +1,6 @@
 import unittest
 
-from cert import Certificate
+from digital_certificate.cert import Certificate
 
 pfx_file = "./tests/files/cert.pfx"
 pfx_file_not_found = "pfx_file_not_found.pfx"
