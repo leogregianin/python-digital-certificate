@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="python-digital-certificate",
-    version="0.1.0",
+    version="0.1.1",
     url="https://github.com/leogregianin/python-digital-certificate",
     author="Leonardo Gregianin",
     author_email="leogregianin@gmail.com",
