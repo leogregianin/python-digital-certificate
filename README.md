@@ -2,6 +2,17 @@
 
 [![PyPI](https://img.shields.io/pypi/v/python-digital-certificate)](https://pypi.org/project/python-digital-certificate/)[![python-digital-certificate](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml/badge.svg)](https://github.com/leogregianin/python-digital-certificate/actions/workflows/main.yml)
 
+## Install
+
+From source:
+```sh
+$ python setup.py install
+```
+
+From PyPi:
+```sh
+$ pip install python-digital-certificate
+```
 
 ## Development
 
