@@ -38,12 +38,13 @@ $ python -m unittest
 ```
 
 ## Using
+The package can be used with the pfx file being the pfx or p12 file path or the bynary file content
 
 ```python
 
 from digital_certificate.cert import Certificate
 
-
+# Instantiate the class with the file path or the bynary file content 
 _cert = Certificate(
     pfx_file="./pfx-files/test_file.pfx",
     password=b"123456"
@@ -69,4 +70,14 @@ print(_cert.common_name())
 
 # Get Issuer name
 print(_cert.issuer())
+```
+
+### Using the bynary
+If one already have the file in memory, the package can be used instantiating the class as following
+
+```python
+_cert = Certificate(
+    pfx_file=bynary_file_content,
+    password=b"123456"
+)
 ```
