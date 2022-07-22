@@ -24,6 +24,27 @@ class test_certificado_p12(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             _cert.read_pfx_file()
 
+    def test_p12_file_bynary(self):
+        with open(p12_file, "rb") as file:
+            p12_bynary = file.read()
+
+        _cert = Certificate(
+            pfx_file=p12_bynary,
+            password=password_ok
+        )
+        _cert.read_pfx_file()
+
+    def test_p12_file_bynary_invalid(self):
+        with open(p12_file, "rb") as file:
+            p12_bynary = file.read()
+        p12_bynary = p12_bynary[:-100]
+        _cert = Certificate(
+            pfx_file=p12_bynary,
+            password=password_ok
+        )
+        with self.assertRaises(Exception):
+            _cert.read_pfx_file()
+
     def test_p12_senha_invalida(self):
         _cert = Certificate(
             pfx_file=p12_file,
@@ -91,6 +112,28 @@ class test_certificado_pfx(unittest.TestCase):
         )
 
         with self.assertRaises(FileNotFoundError):
+            _cert.read_pfx_file()
+
+    def test_pfx_file_bynary(self):
+        with open(pfx_file, "rb") as file:
+            pfx_bynary = file.read()
+
+        _cert = Certificate(
+            pfx_file=pfx_bynary,
+            password=password_ok
+        )
+        _cert.read_pfx_file()
+
+    def test_pfx_file_bynary_invalid(self):
+        with open(pfx_file, "rb") as file:
+            pfx_bynary = file.read()
+
+        pfx_bynary = pfx_bynary[:-100]
+        _cert = Certificate(
+            pfx_file=pfx_bynary,
+            password=password_ok
+        )
+        with self.assertRaises(Exception):
             _cert.read_pfx_file()
 
     def test_pfx_senha_invalida(self):
