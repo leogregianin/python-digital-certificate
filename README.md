@@ -26,7 +26,7 @@ $ source .venv/bin/activate
 Install Dependencies
     
 ```sh
-$ pip install -r requirements.txt
+$ pip install .
 ```
 
 ## Tests
