@@ -38,7 +38,7 @@ $ python -m unittest
 ```
 
 ## Using
-The package can be used with the pfx file being the pfx or p12 file path or the bynary file content
+The package can be used with the pfx or p12 file, being the pfx file path or the binary file content
 
 ```python
 
