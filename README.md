@@ -26,7 +26,7 @@ $ source .venv/bin/activate
 Install Dependencies
     
 ```sh
-$ pip install -r requirements.txt
+$ pip install .
 ```
 
 ## Tests
@@ -38,12 +38,13 @@ $ python -m unittest
 ```
 
 ## Using
+The package can be used with the pfx or p12 file, being the pfx file path or the binary file content
 
 ```python
 
 from digital_certificate.cert import Certificate
 
-
+# Instantiate the class with the file path or the binary file content 
 _cert = Certificate(
     pfx_file="./pfx-files/test_file.pfx",
     password=b"123456"
@@ -69,4 +70,14 @@ print(_cert.common_name())
 
 # Get Issuer name
 print(_cert.issuer())
+```
+
+### Using the binary content
+If one already have the file in memory, the package can be used instantiating the class as following
+
+```python
+_cert = Certificate(
+    pfx_file=binary_file_content,
+    password=b"123456"
+)
 ```
