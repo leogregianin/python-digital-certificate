@@ -44,7 +44,7 @@ The package can be used with the pfx or p12 file, being the pfx file path or the
 
 from digital_certificate.cert import Certificate
 
-# Instantiate the class with the file path or the bynary file content 
+# Instantiate the class with the file path or the binary file content 
 _cert = Certificate(
     pfx_file="./pfx-files/test_file.pfx",
     password=b"123456"
@@ -72,12 +72,12 @@ print(_cert.common_name())
 print(_cert.issuer())
 ```
 
-### Using the bynary
+### Using the binary content
 If one already have the file in memory, the package can be used instantiating the class as following
 
 ```python
 _cert = Certificate(
-    pfx_file=bynary_file_content,
+    pfx_file=binary_file_content,
     password=b"123456"
 )
 ```
