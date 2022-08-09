@@ -45,6 +45,29 @@ class Certificate:
     def common_name(self):
         return self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
 
+    def common_name(self):
+        return self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
+
+    def common_name_split_issuer(self):
+        """
+        Issuer ou "Emitente"
+        """
+        try:
+            cn = self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
+            return cn.split(':')[0]
+        except BaseException:
+            return ''
+
+    def common_name_split_document(self):
+        """
+        Document or "CPF or CNPJ"
+        """
+        try:
+            cn = self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
+            return cn.split(':')[1]
+        except BaseException:
+            return ''
+
     def serial_number(self):
         return self.cert.serial_number
 
