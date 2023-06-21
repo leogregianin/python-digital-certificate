@@ -45,9 +45,6 @@ class Certificate:
     def common_name(self):
         return self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
 
-    def common_name(self):
-        return self.cert.subject.get_attributes_for_oid(NameOID.COMMON_NAME)[0].value
-
     def common_name_split_issuer(self):
         """
         Issuer ou "Emitente"
