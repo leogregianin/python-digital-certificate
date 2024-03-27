@@ -34,10 +34,10 @@ class Certificate:
             raise Exception(f"Fail to open file. {err}")
 
     def not_valid_before(self):
-        return self.cert.not_valid_before
+        return self.cert.not_valid_before_utc
 
     def not_valid_after(self):
-        return self.cert.not_valid_after
+        return self.cert.not_valid_after_utc
 
     def subject(self):
         return self.cert.subject
