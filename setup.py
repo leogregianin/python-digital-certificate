@@ -20,7 +20,7 @@ setup(
     install_requires=[
         'certifi',
         'cffi',
-        'cryptography',
+        "cryptography>=42.0.0",
         'pyOpenSSL',
     ],
     classifiers=[
