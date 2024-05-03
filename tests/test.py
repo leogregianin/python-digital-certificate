@@ -68,7 +68,7 @@ class test_certificado_p12(unittest.TestCase):
             password=password_ok
         )
         _cert.read_pfx_file()
-        self.assertEqual(str(_cert.not_valid_before()), "2022-01-25 15:20:15")
+        self.assertEqual(str(_cert.not_valid_before()), "2022-01-25 15:20:15+00:00")
 
     def test_p12_not_valid_after(self):
         _cert = Certificate(
@@ -76,7 +76,7 @@ class test_certificado_p12(unittest.TestCase):
             password=password_ok
         )
         _cert.read_pfx_file()
-        self.assertEqual(str(_cert.not_valid_after()), "2024-10-20 15:20:15")
+        self.assertEqual(str(_cert.not_valid_after()), "2024-10-20 15:20:15+00:00")
 
     def test_p12_serial_number(self):
         _cert = Certificate(
@@ -159,7 +159,7 @@ class test_certificado_pfx(unittest.TestCase):
             password=password_ok
         )
         _cert.read_pfx_file()
-        self.assertEqual(str(_cert.not_valid_before()), "2022-01-25 15:20:15")
+        self.assertEqual(str(_cert.not_valid_before()), "2022-01-25 15:20:15+00:00")
 
     def test_not_valid_after(self):
         _cert = Certificate(
@@ -167,7 +167,7 @@ class test_certificado_pfx(unittest.TestCase):
             password=password_ok
         )
         _cert.read_pfx_file()
-        self.assertEqual(str(_cert.not_valid_after()), "2024-10-20 15:20:15")
+        self.assertEqual(str(_cert.not_valid_after()), "2024-10-20 15:20:15+00:00")
 
     def test_serial_number(self):
         _cert = Certificate(
